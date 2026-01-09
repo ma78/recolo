@@ -1,16 +1,161 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Mission from '../components/Mission.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Contact from '../components/Contact.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Recolo - Stories That Crossed Oceans"
+  description="Capturing the lost voices of Australian immigrants through AI-powered conversations in their native language"
+>
+  <!-- Hero Section -->
+  <Hero
+    title="Stories That Crossed Oceans"
+    subtitle="Every immigrant carries a lifetime of memories across the seas. We capture them before they fade—through conversations in your native tongue."
+    variant="main"
+  />
+
+  <!-- Mission Section -->
+  <Mission />
+
+  <!-- How It Works Section -->
+  <HowItWorks />
+
+  <!-- Languages Section -->
+  <section class="section languages-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>In Your Own Voice</h2>
+        <p>
+          Stories feel different in your mother tongue. The emotion, the nuance,
+          the cultural context—all preserved when you speak naturally.
+        </p>
+      </div>
+
+      <div class="languages-grid">
+        <div class="language-card">
+          <span class="lang-flag">🇮🇹</span>
+          <h3>Italiano</h3>
+          <p>Post-war migrants who built new lives from 1950s-1970s</p>
+          <a href="/italian" class="lang-link">Explore Italian Stories →</a>
+        </div>
+
+        <div class="language-card">
+          <span class="lang-flag">🇻🇳</span>
+          <h3>Tiếng Việt</h3>
+          <p>Refugee journeys after 1975, rebuilding across oceans</p>
+          <a href="/vietnamese" class="lang-link">Explore Vietnamese Stories →</a>
+        </div>
+
+        <div class="language-card">
+          <span class="lang-flag">🇬🇷</span>
+          <h3>Ελληνικά</h3>
+          <p>Greek migrants seeking opportunity in the lucky country</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <div class="language-card">
+          <span class="lang-flag">🇨🇳</span>
+          <h3>中文</h3>
+          <p>Chinese stories across generations, from goldfields to cities</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <Contact />
+
+</Layout>
+
+<style>
+  .languages-section {
+    background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-paper-dark) 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-header h2 {
+    margin-bottom: 1rem;
+  }
+
+  .languages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .language-card {
+    background: var(--color-paper);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 2px solid var(--color-sepia-light);
+    transition: all 0.3s ease;
+  }
+
+  .language-card:hover {
+    border-color: var(--color-ocean-900);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(12, 35, 64, 0.15);
+  }
+
+  .lang-flag {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .language-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-ocean-900);
+  }
+
+  .language-card p {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .lang-link {
+    color: var(--color-ocean-700);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  .lang-link:hover {
+    color: var(--color-ocean-900);
+    text-decoration: underline;
+  }
+
+  .coming-soon {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--color-sepia-light);
+    color: var(--color-paper);
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 1024px) {
+    .languages-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .languages-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

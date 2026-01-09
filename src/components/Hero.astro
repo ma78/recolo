@@ -1,0 +1,152 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  variant?: 'main' | 'italian' | 'vietnamese';
+}
+
+const {
+  title = 'Stories That Crossed Oceans',
+  subtitle = 'Capturing the lost voices of Australian immigrants through conversations in their native language',
+  backgroundImage = 'linear-gradient(135deg, rgba(12, 35, 64, 0.85) 0%, rgba(26, 58, 92, 0.85) 100%), url("https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1920&q=80")',
+  variant = 'main'
+} = Astro.props;
+
+const variantContent = {
+  main: {
+    badge: 'Voices from Every Shore',
+    cta: 'Begin Your Journey',
+    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1920&q=80'
+  },
+  italian: {
+    badge: 'Parliamo Italiano',
+    cta: 'Inizia Il Tuo Viaggio',
+    image: 'https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=1920&q=80'
+  },
+  vietnamese: {
+    badge: 'Chúng tôi nói Tiếng Việt',
+    cta: 'Bắt Đầu Hành Trình',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80'
+  }
+};
+
+const content = variantContent[variant];
+const bgImage = `linear-gradient(135deg, rgba(12, 35, 64, 0.85) 0%, rgba(26, 58, 92, 0.85) 100%), url("${content.image}")`;
+---
+
+<section class="hero" style={`background-image: ${bgImage};`}>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="fade-in-up">
+      <span class="lang-badge">{content.badge}</span>
+      <h1 class="hero-title">{title}</h1>
+      <p class="hero-subtitle">{subtitle}</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">{content.cta}</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative wave element -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.1,118.92,156.63,69.08,321.39,56.44Z"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -80px; /* Counteract any nav spacing */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(12, 35, 64, 0.3) 0%, rgba(12, 35, 64, 0.5) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .hero-title {
+    color: var(--color-paper);
+    font-size: clamp(3rem, 7vw, 5rem);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    color: var(--color-sunrise-light);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-cta {
+    margin-top: 2rem;
+  }
+
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 2;
+  }
+
+  .wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+    fill: var(--color-paper);
+  }
+
+  .lang-badge {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(245, 230, 211, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--color-sunrise);
+    color: var(--color-ocean-900);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 80vh;
+      background-attachment: scroll;
+    }
+
+    .hero-title {
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

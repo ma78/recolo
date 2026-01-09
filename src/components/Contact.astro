@@ -1,0 +1,171 @@
+---
+---
+
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-text">
+        <h2>Begin Your Story</h2>
+        <p>
+          Don't let these memories fade. Schedule a free consultation to learn how
+          Recolo can preserve your family's immigrant journey—in your own language,
+          at your own pace.
+        </p>
+        <div class="contact-info">
+          <div class="info-item">
+            <strong>Email:</strong>
+            <a href="mailto:ciao@recolo.me">ciao@recolo.me</a>
+          </div>
+          <div class="info-item">
+            <strong>Languages:</strong>
+            <span>Italian, Vietnamese, Greek, Chinese, Spanish, Arabic, & more</span>
+          </div>
+          <div class="info-item">
+            <strong>Based in:</strong>
+            <span>Sydney, Australia</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="consultation-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="language">Preferred Language</label>
+            <select id="language" name="language" required>
+              <option value="">Select a language</option>
+              <option value="italian">Italian</option>
+              <option value="vietnamese">Vietnamese</option>
+              <option value="greek">Greek</option>
+              <option value="chinese">Chinese (Mandarin/Cantonese)</option>
+              <option value="spanish">Spanish</option>
+              <option value="arabic">Arabic</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us briefly about the story you want to preserve</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Request Free Consultation</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    background-color: var(--color-paper);
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-text h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-text p {
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .info-item strong {
+    color: var(--color-ocean-900);
+    min-width: 100px;
+  }
+
+  .info-item a,
+  .info-item span {
+    color: var(--color-sepia);
+  }
+
+  .contact-form-wrapper {
+    background: var(--color-paper-dark);
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    color: var(--color-ocean-900);
+    font-size: 0.875rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid var(--color-sepia-light);
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--color-paper);
+    color: var(--color-sepia-dark);
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-ocean-700);
+  }
+
+  .contact-form button {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Simple form submission handler (client:load makes this interactive)
+  const form = document.getElementById('consultation-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your interest! We will contact you soon to schedule your free consultation.');
+      form.reset();
+    });
+  }
+</script>

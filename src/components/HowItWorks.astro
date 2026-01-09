@@ -1,0 +1,190 @@
+---
+---
+
+<section id="how-it-works" class="section how-it-works-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Journey of Ten Conversations</h2>
+      <p>
+        Like chapters in a book, each call explores a different era of your life.
+        Our AI journalist guides you through memories with gentle curiosity and deep respect.
+      </p>
+    </div>
+
+    <div class="chapters-grid">
+      <div class="chapter">
+        <div class="chapter-number">1</div>
+        <h3>Origins</h3>
+        <p>Where it began. Your childhood, your homeland, the world you left behind.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">2</div>
+        <h3>The Decision</h3>
+        <p>Why leave? The hopes, fears, and dreams that propelled you across oceans.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">3</div>
+        <h3>The Passage</h3>
+        <p>Ships, planes, journeys. The days between worlds.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">4</div>
+        <h3>First Sight</h3>
+        <p>Arriving in Australia. The strange new land, the first impressions.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">5</div>
+        <h3>Building Anew</h3>
+        <p>Work, home, community. carving out a place in an unfamiliar country.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">6</div>
+        <h3>Love & Family</h3>
+        <p>Marriage, children, keeping traditions alive in a new world.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">7</div>
+        <h3>Triumphs & Challenges</h3>
+        <p>The obstacles overcome, the victories won, the wisdom gained.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">8</div>
+        <h3>Crossroads</h3>
+        <p>Pivotal moments, difficult choices, paths taken and not taken.</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">9</div>
+        <h3>Reflections</h3>
+        <p>Looking back. What would you tell your younger self?</p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">10</div>
+        <h3>Legacy</h3>
+        <p>Messages for future generations. The values, the lessons, the love.</p>
+      </div>
+    </div>
+
+    <div class="ai-explanation">
+      <h3>An AI Journalist Who Listens</h3>
+      <p>
+        Our AI doesn't just ask questions—it follows threads, notices emotion,
+        and knows when to let silence do the work. More like a skilled interviewer
+        than a machine. And it speaks your language: Italian, Vietnamese, Greek,
+        Chinese, Spanish, Arabic, and many more.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works-section {
+    background-color: var(--color-paper-dark);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+
+  .section-header h2 {
+    margin-bottom: 1rem;
+  }
+
+  .chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .chapter {
+    background: var(--color-paper);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .chapter:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .chapter-number {
+    width: 40px;
+    height: 40px;
+    background: var(--color-ocean-900);
+    color: var(--color-sunrise);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .chapter h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-ocean-900);
+  }
+
+  .chapter p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--color-sepia);
+  }
+
+  .ai-explanation {
+    background: linear-gradient(135deg, var(--color-ocean-900) 0%, var(--color-ocean-800) 100%);
+    color: var(--color-paper);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  .ai-explanation h3 {
+    color: var(--color-sunrise);
+    margin-bottom: 1rem;
+  }
+
+  .ai-explanation p {
+    color: var(--color-sunrise-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 1024px) {
+    .chapters-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .chapters-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-explanation {
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .chapters-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

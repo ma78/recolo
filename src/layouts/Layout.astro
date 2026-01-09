@@ -1,0 +1,146 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Recolo - Stories That Crossed Oceans',
+  description = 'Capturing the lost voices of Australian immigrants through AI-powered conversations in their native language'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Preload Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Recolo</h3>
+            <p>Stories That Crossed Oceans</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h4>Languages</h4>
+              <ul>
+                <li><a href="/italian">Italiano</a></li>
+                <li><a href="/vietnamese">Tiếng Việt</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>About</h4>
+              <ul>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Recolo. Preserving immigrant voices across generations.</p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .footer {
+        background-color: var(--color-ocean-900);
+        color: var(--color-paper);
+        padding: 4rem 0 2rem;
+        margin-top: 6rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-brand h3 {
+        color: var(--color-sunrise);
+        margin-bottom: 0.5rem;
+        font-size: 1.75rem;
+      }
+
+      .footer-brand p {
+        color: var(--color-sunrise-light);
+        font-style: italic;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .footer-links h4 {
+        color: var(--color-sunrise);
+        margin-bottom: 1rem;
+        font-size: 1.125rem;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: var(--color-paper-dark);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-sunrise);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid var(--color-ocean-800);
+        padding-top: 2rem;
+        text-align: center;
+      }
+
+      .footer-bottom p {
+        color: var(--color-paper-dark);
+        font-size: 0.875rem;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .footer-links {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </body>
+</html>

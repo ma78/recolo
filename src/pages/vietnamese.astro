@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout
+  title="Recolo - Câu Chuyện Việt Nam"
+  description="Bắt giành giật những giọng nói đã mất của người di cư Việt Nam tại Úc qua những cuộc trò chuyện bằng tiếng Việt"
+>
+  <!-- Vietnamese-specific Hero -->
+  <Hero
+    title="Câu Chuyện Việt Nam"
+    subtitle="Từ Việt Nam đến Úc: những giọng nói của người tị nạn, những chuyến tàu, và những cuộc đời mới. Câu chuyện của bạn được kể bằng tiếng mẹ đẻ."
+    variant="vietnamese"
+  />
+
+  <!-- Vietnamese Story Section -->
+  <section class="section vietnamese-story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image">
+          <div class="vintage-img photo-placeholder">
+            <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="500" fill="#f5e6d3"/>
+              <rect x="20" y="20" width="360" height="460" fill="#e8e4dd" stroke="#8b7355" stroke-width="2"/>
+              <text x="200" y="220" text-anchor="middle" fill="#5c4d3c" font-family="Georgia" font-size="26">
+                Ảnh Cũ
+              </text>
+              <text x="200" y="260" text-anchor="middle" fill="#8b7355" font-family="Georgia" font-size="18">
+                Gia đình Việt Nam trên thuyền
+              </text>
+              <text x="200" y="285" text-anchor="middle" fill="#8b7355" font-family="Georgia" font-size="18">
+                fleeing, 1978-1980
+              </text>
+            </svg>
+          </div>
+        </div>
+        <div class="story-content">
+          <h2>Hành Trình Tị Nạn</h2>
+          <p>
+            Sau sự sụp đổ của Sài Gòn năm 1975, hơn 80,000 người Việt Nam đã tìm
+            đường đến Úc bằng thuyền—theo con đường boat people—hoặc qua các trại
+            tị nạn ở Đông Nam Á.
+          </p>
+          <p>
+            Những câu chuyện này—về sự thất bát của đất nước, về những chuyến đi
+            biển đầy nguy hiểm, về việc bắt đầu lại từ con số zero trong một đất nước
+            xa lạ—xứng đáng được kể lại bằng tiếng Việt. Không phải bản dịch. Không
+            phải đơn giản hóa. Nhưng như bạn đã sống, bằng tiếng mẹ đẻ của bạn.
+          </p>
+          <div class="vietnamese-quote">
+            <p class="quote-text">
+              "Khi tôi rời Việt Nam, tôi không biết khi nào sẽ thấy lại quê hương.
+              Bốn mươi năm sau, tôi vẫn mơ về Sài Gòn trong tiếng Việt. Nhưng con
+              cháu của tôi không hiểu đầy đủ câu chuyện của tôi."
+            </p>
+            <p class="quote-author">— Minh, di cư năm 1979</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vietnamese Journey Timeline -->
+  <section class="section journey-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Hành Trình Việt Nam</h2>
+        <p>
+          Mười cuộc trò chuyện truy dấu con đường từ Việt Nam đến Úc
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">1</div>
+          <div class="timeline-content">
+            <h3>Việt Nam Trước 1975</h3>
+            <p>Thời thơ ấu, gia đình, cuộc sống trước chiến tranh. Giáo dục, giấc mơ, ngày bình thường.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">2</div>
+          <div class="timeline-content">
+            <h3>Sự Sụp Đổ</h3>
+            <p>Ngày Sài Gòn thất thủ. Sự hoảng loạn, quyết định đau đớn, chia ly gia đình. Nỗi sợ hãi và không chắc chắn.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">3</div>
+          <div class="timeline-content">
+            <h3>Thoát Ly</h3>
+            <p>Đêm rời bỏ Việt Nam, mạo hiểm tính mạng. Trại tập trung, gian khó, chờ đợi cơ hội.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">4</div>
+          <div class="timeline-content">
+            <h3>Chuyến Đi Biển</h3>
+            <p>Trên thuyền nhỏ giữa đại dương—bão cướp, bệnh tật, cái chết gần kề. Những ngày dài sợ hãi và hy vọng.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">5</div>
+          <div class="timeline-content">
+            <h3>Trại Tị Nạn</h3>
+            <p>Singapore, Malaysia, Indonesia, Philippines. Chờ đợi xử lý. Những tháng không chắc chắn về tương lai.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">6</div>
+          <div class="timeline-content">
+            <h3>Đến Úc</h3>
+            <p>Hạ cánh ở Sydney, Melbourne, Perth. Các trại di cư như Cabramatta và Fairfield. Sự ngạc nhiên văn hóa.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">7</div>
+          <div class="timeline-content">
+            <h3>Xây Dựng Cuộc Sống Mới</h3>
+            <p>Học tiếng Anh, việc làm đầu tiên, giáo dục cho con cái. Cộng đồng Việt Nam phát triển.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">8</div>
+          <div class="timeline-content">
+            <h3>Thắng Lợi và Vết Thương</h3>
+            <p>Nhà đầu tiên, kinh doanh, con cái thành công. Nhưng cũng có PTSD, cô đơn, nỗi nhớ quê hương không nguôi.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">9</div>
+          <div class="timeline-content">
+            <h3>Suy Nghĩ</h3>
+            <p>Liệu có đáng? Bạn sẽ nói gì với bản thân trẻ của mình trên con thuyền? Bạn mang theo Việt Nam gì, và mất gì?</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">10</div>
+          <div class="timeline-content">
+            <h3>Di Sản</h3>
+            <p>Tin nhắn cho thế hệ tương lai. Truyền thống cần giữ gìn. Sự khôn ngoan tích lũy giữa hai thế giới.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vietnamese CTA Section -->
+  <section class="section vietnamese-cta-section">
+    <div class="container">
+      <div class="vietnamese-cta-content">
+        <h2>Đừng Để Câu Chuyện Của Bạn Mất Đi</h2>
+        <p>
+          Trải nghiệm của bạn là một chương quan trọng trong lịch sử Úc.
+          Câu chuyện Việt Nam của bạn xứng đáng được kể—bằng tiếng Việt—cho
+          các thế hệ mai sau.
+        </p>
+        <p>
+          Nhân viên AI journalist của chúng tôi sẽ trò chuyện với bạn bằng tiếng Việt,
+          lắng nghe giọng nói của bạn, nắm bắt câu chuyện của bạn, chương này
+          đến chương khác.
+        </p>
+        <a href="#contact" class="btn-primary">Bắt Đầu Hành Trình</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <Contact />
+
+</Layout>
+
+<style>
+  .vietnamese-story-section {
+    background-color: var(--color-paper);
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .story-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .story-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .vietnamese-quote {
+    background: linear-gradient(135deg, var(--color-sunrise-light) 0%, var(--color-paper) 100%);
+    border-left: 4px solid var(--color-ocean-900);
+    padding: 2rem;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+
+  .quote-text {
+    font-size: 1.25rem;
+    color: var(--color-ocean-900);
+    margin-bottom: 1rem;
+  }
+
+  .quote-author {
+    font-size: 1rem;
+    color: var(--color-sepia);
+    text-align: right;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    height: auto;
+  }
+
+  .journey-section {
+    background-color: var(--color-paper-dark);
+  }
+
+  .timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--color-sepia-light);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background: var(--color-ocean-900);
+    color: var(--color-sunrise);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border: 4px solid var(--color-paper-dark);
+  }
+
+  .timeline-content h3 {
+    color: var(--color-ocean-900);
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .timeline-content p {
+    line-height: 1.8;
+    color: var(--color-sepia);
+  }
+
+  .vietnamese-cta-section {
+    background: linear-gradient(135deg, var(--color-ocean-900) 0%, var(--color-ocean-800) 100%);
+    color: var(--color-paper);
+  }
+
+  .vietnamese-cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .vietnamese-cta-content h2 {
+    color: var(--color-sunrise);
+    margin-bottom: 1.5rem;
+  }
+
+  .vietnamese-cta-content p {
+    color: var(--color-sunrise-light);
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .timeline::before {
+      left: 10px;
+    }
+
+    .timeline-item {
+      padding-left: 40px;
+    }
+
+    .timeline-marker {
+      width: 30px;
+      height: 30px;
+      font-size: 0.875rem;
+      left: -8px;
+    }
+  }
+</style>

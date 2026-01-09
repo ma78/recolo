@@ -1,0 +1,104 @@
+---
+---
+
+<section id="mission" class="section mission-section">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-text">
+        <h2>Stories Slipping Away</h2>
+        <p>
+          Every day, we lose the voices of those who crossed oceans to build new lives in Australia.
+          Their children and grandchildren often never hear the full story—in their native tongue,
+          with all the emotion, detail, and wisdom it deserves.
+        </p>
+        <p>
+          <strong>Recolo</strong> captures these memories through intimate, AI-powered conversations
+          that speak your language—Italian, Vietnamese, Greek, Chinese, and many more.
+        </p>
+        <p class="mission-highlight">
+          Not just a biography. An investigative journey into your life, conducted by an AI
+          journalist who knows how to listen.
+        </p>
+      </div>
+      <div class="mission-image">
+        <div class="vintage-img-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=600&q=80"
+            alt="Vintage immigrant family arriving by ship"
+            class="vintage-img"
+            loading="lazy"
+          />
+          <div class="photo-caption">
+            <p>Immigrant families arriving at Sydney Harbour, 1950s</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission-section {
+    background-color: var(--color-paper);
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .mission-text h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-ocean-900);
+  }
+
+  .mission-text p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .mission-highlight {
+    background: linear-gradient(135deg, var(--color-sunrise-light) 0%, var(--color-paper) 100%);
+    border-left: 4px solid var(--color-ocean-900);
+    padding: 1.5rem;
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .vintage-img-wrapper {
+    position: relative;
+  }
+
+  .vintage-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    filter: sepia(0.3) contrast(1.1);
+    border: 12px solid var(--color-paper-dark);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  .photo-caption {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--color-sepia);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .mission-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .mission-image {
+      order: -1;
+    }
+  }
+</style>
