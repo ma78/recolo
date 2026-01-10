@@ -21,15 +21,12 @@
         </p>
       </div>
       <div class="mission-image">
-        <div class="vintage-img-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1500463959177-e0869687df26?w=600&q=80"
-            alt="Vintage ocean waves and horizon, symbolizing immigrant journeys"
-            class="vintage-img"
-            loading="lazy"
-          />
-          <div class="photo-caption">
-            <p>Stories That Crossed Oceans: Preserving Immigrant Journeys</p>
+        <div class="vintage-placeholder">
+          <div class="ocean-pattern"></div>
+          <div class="placeholder-content">
+            <div class="ship-icon">⛵</div>
+            <h3>Stories Worth Preserving</h3>
+            <p>Every immigrant carries memories across oceans</p>
           </div>
         </div>
       </div>
@@ -68,27 +65,57 @@
     margin-top: 2rem;
   }
 
-  .vintage-img-wrapper {
+  .vintage-placeholder {
     position: relative;
-  }
-
-  .vintage-img {
     width: 100%;
-    height: auto;
     aspect-ratio: 4/5;
-    object-fit: cover;
-    filter: sepia(0.3) contrast(1.1);
+    background: linear-gradient(180deg, var(--color-ocean-800) 0%, var(--color-ocean-900) 100%);
     border: 12px solid var(--color-paper-dark);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
-  .photo-caption {
-    margin-top: 1rem;
+  .ocean-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      rgba(212, 165, 116, 0.1) 10px,
+      rgba(212, 165, 116, 0.1) 20px
+    );
+  }
+
+  .placeholder-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    font-style: italic;
-    color: var(--color-sepia);
-    font-size: 0.875rem;
+    padding: 2rem;
+  }
+
+  .ship-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .placeholder-content h3 {
+    color: var(--color-sunrise);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .placeholder-content p {
+    color: var(--color-sunrise-light);
+    font-size: 1rem;
+    margin: 0;
   }
 
   @media (max-width: 768px) {
