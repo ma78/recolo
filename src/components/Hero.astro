@@ -2,14 +2,12 @@
 interface Props {
   title?: string;
   subtitle?: string;
-  backgroundImage?: string;
   variant?: 'main' | 'italian' | 'vietnamese';
 }
 
 const {
   title = 'Stories That Crossed Oceans',
   subtitle = 'Capturing the lost voices of Australian immigrants through conversations in their native language',
-  backgroundImage = 'linear-gradient(135deg, rgba(12, 35, 64, 0.85) 0%, rgba(26, 58, 92, 0.85) 100%), url("https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1920&q=80")',
   variant = 'main'
 } = Astro.props;
 

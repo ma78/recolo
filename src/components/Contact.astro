@@ -160,7 +160,7 @@
 
 <script>
   // Simple form submission handler (client:load makes this interactive)
-  const form = document.getElementById('consultation-form');
+  const form = document.getElementById('consultation-form') as HTMLFormElement;
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
