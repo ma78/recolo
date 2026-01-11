@@ -29,6 +29,21 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <!-- Header with Logo -->
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="logo">
+          <span class="logo-icon">⛵</span>
+          <span class="logo-text">Recolo</span>
+        </div>
+        <nav class="main-nav">
+          <a href="/">Home</a>
+          <a href="/italian">Italiano</a>
+          <a href="/vietnamese">Tiếng Việt</a>
+        </nav>
+      </div>
+    </header>
+
     <slot />
 
     <!-- Footer -->
@@ -64,6 +79,84 @@ const {
     </footer>
 
     <style>
+      .site-header {
+        background: var(--color-paper);
+        border-bottom: 2px solid var(--color-sepia-light);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        font-size: 2rem;
+      }
+
+      .logo-text {
+        font-family: var(--font-serif);
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--color-ocean-900);
+        letter-spacing: -0.02em;
+      }
+
+      .main-nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .main-nav a {
+        color: var(--color-sepia);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .main-nav a:hover {
+        color: var(--color-ocean-900);
+      }
+
+      .main-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--color-ocean-900);
+        transition: width 0.3s ease;
+      }
+
+      .main-nav a:hover::after {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .main-nav {
+          gap: 1rem;
+          font-size: 0.875rem;
+        }
+      }
+
       .footer {
         background-color: var(--color-ocean-900);
         color: var(--color-paper);
