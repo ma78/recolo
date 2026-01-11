@@ -1,0 +1,192 @@
+---
+---
+
+<section class="section process-flow-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>How Recolo Works</h2>
+      <p>
+        Four simple steps to preserve your immigrant story for future generations
+      </p>
+    </div>
+
+    <div class="process-steps">
+      <!-- Step 1 -->
+      <div class="process-step">
+        <div class="step-icon">📝</div>
+        <div class="step-number">1</div>
+        <h3>Sign Up</h3>
+        <p>
+          Tell us about your immigrant journey and choose your preferred language
+        </p>
+        <div class="step-detail">
+          <span>Languages: Italian • Vietnamese • Greek • Chinese • Spanish • Arabic</span>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step">
+        <div class="step-icon">📞</div>
+        <div class="step-number">2</div>
+        <h3>AI Agent Calls You</h3>
+        <p>
+          Our AI journalist calls you for a 30-minute conversation in your native language
+        </p>
+        <div class="step-detail">
+          <span>Speaks naturally • Asks thoughtful questions • Listens deeply</span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="step-icon">🔟</div>
+        <div class="step-number">3</div>
+        <h3>Ten Conversations</h3>
+        <p>
+          Repeat across 10 sessions, each exploring a different chapter of your life
+        </p>
+        <div class="step-detail">
+          <span>Childhood • Journey • Arrival • Building Life • Love • Triumphs • Legacy</span>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step">
+        <div class="step-icon">📖</div>
+        <div class="step-number">4</div>
+        <h3>Receive Your Digital Memoir</h3>
+        <p>
+          Get a beautiful interactive digital book with your complete story
+        </p>
+        <div class="step-detail">
+          <span>Microsoft Sway • Share with family • Preserve forever</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-cta">
+      <p>Ready to preserve your story?</p>
+      <a href="#contact" class="btn-primary">Begin Your Journey</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-flow-section {
+    background: linear-gradient(180deg, var(--color-paper-dark) 0%, var(--color-paper) 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .section-header h2 {
+    margin-bottom: 1rem;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .process-step {
+    background: var(--color-paper);
+    padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--color-sepia-light);
+    transition: all 0.3s ease;
+  }
+
+  .process-step:hover {
+    border-color: var(--color-ocean-700);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-number {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-ocean-900);
+    color: var(--color-sunrise);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border: 3px solid var(--color-paper);
+  }
+
+  .process-step h3 {
+    color: var(--color-ocean-900);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-sepia);
+    margin-bottom: 1rem;
+  }
+
+  .step-detail {
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-sepia-light);
+  }
+
+  .step-detail span {
+    font-size: 0.8125rem;
+    color: var(--color-ocean-700);
+    font-weight: 600;
+  }
+
+  .process-cta {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--color-ocean-900) 0%, var(--color-ocean-800) 100%);
+    border-radius: 0.5rem;
+  }
+
+  .process-cta p {
+    color: var(--color-sunrise-light);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .process-steps {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .process-cta {
+      padding: 2rem 1.5rem;
+    }
+
+    .process-cta p {
+      font-size: 1.125rem;
+    }
+  }
+</style>
